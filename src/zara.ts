@@ -1,4 +1,4 @@
-#!/usr/bin/env -S node --loader ts-node/esm/transpile-only 
+#!/usr/bin/env node --loader ts-node/esm/transpile-only 
 
 import { am } from 'am';
 import { apps } from './internals.js';
