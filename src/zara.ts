@@ -1,7 +1,6 @@
 #!/usr/bin/env node --loader ts-node/esm/transpile-only 
 
 import { am } from 'am';
-import { apps } from './internals.js';
 import { importApps } from './common/import-apps.js';
 import { logger } from './common/logger.js';
 
@@ -23,6 +22,7 @@ const main = async (pattern: string = `${process.cwd()}/apps/**/*.{js,ts}`) => {
     await importApps(pattern);
     
     logBanner();
+    const { apps } = await import('./internals.js');
     logger.info('app', 'Started %s apps', apps.size);
     logBanner();
 };
