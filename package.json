@@ -8,6 +8,9 @@
     "bin": {
         "zara": "./dist/zara.cjs"
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "prepare": "npm run build",
         "build": "tsup src/index.ts --dts && tsup src/zara.ts --minify",
